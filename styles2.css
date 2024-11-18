@@ -274,10 +274,7 @@ body {
     .menu {
         margin: 0px;
         width: 100%; 
-        box-sizing: border-box;
-        height: auto;
         z-index: 4;
-        pointer-events: none;
     }
 
     .info {
@@ -285,6 +282,10 @@ body {
         width: calc(100% - 10px);
         bottom: 0;
         margin-bottom: 5px;
+    }
+
+    .info-about {
+        width: 100%;
     }
 
     .top {
@@ -298,7 +299,7 @@ body {
     }
 
     .images {
-        height: 200px;
+        height: 150px;
         width: auto;
         cursor: nesw-resize; 
         display: block;
