@@ -185,3 +185,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }, { once: true });
     });
 });
+
+
+// Funzione per caricare Lozad.js
+function loadLozad(callback) {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/lozad";
+    script.onload = callback;
+    script.onerror = () => console.error("Errore nel caricamento di Lozad.js.");
+    document.head.appendChild(script);
+}
+
+// Inizializza Lozad.js
+loadLozad(() => {
+    const observer = lozad('.lozad', {
+        loaded: (el) => {
+            console.log(`${el.tagName} caricato`);
+            if (el.tagName === 'VIDEO') {
+                el.play(); // Avvia il video se necessario
+            }
+        }
+    });
+    observer.observe();
+});
