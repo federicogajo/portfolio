@@ -293,7 +293,7 @@ body {
     }
 
     .images {
-        height: 150px;
+        height: 125px;
         width: auto;
         cursor: nesw-resize; 
         display: block;
