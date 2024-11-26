@@ -254,6 +254,10 @@ body {
     position: relative;
 }
 
+.random-infos{
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     #toggle-button {

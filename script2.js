@@ -53,5 +53,5 @@ document.addEventListener("DOMContentLoaded", function() {
     selectRandomBoxes();
 
     // Cambia la selezione ogni 4 secondi (4000 millisecondi)
-    setInterval(selectRandomBoxes, 2000);
+    setInterval(selectRandomBoxes, 5000);
 });
