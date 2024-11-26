@@ -208,3 +208,10 @@ loadLozad(() => {
     });
     observer.observe();
 });
+
+
+const video = document.getElementById("myVideo");
+
+    video.addEventListener("click", (e) => {
+        e.preventDefault(); // Previene il comportamento di default (fullscreen)
+    });
