@@ -1,0 +1,305 @@
+@import url('https://fonts.cdnfonts.com/css/tex-gyre-heros');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'TeXGyreHeros', sans-serif;
+    font-weight: 600;
+    font-size: 10pt;
+    line-height: 11pt;
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    background-color: #000000;
+    position: relative;
+    z-index: 0;
+}
+
+.top {
+    position: fixed;
+    width: calc(100% - 10px); 
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box; 
+    z-index: 4; 
+}
+
+.bottom {
+    position: fixed; 
+    bottom: 0; 
+    width: calc(100% - 10px); 
+    margin: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    box-sizing: border-box; 
+    z-index: 4; 
+}
+
+.menu {
+    width: 300px;
+}
+
+.info {
+    width: 450px;
+}
+
+.info-about {
+    width: 582px;
+}
+
+.infoindex {
+    display: none;
+}
+
+.prj {
+    margin: 0px;
+    position: fixed; 
+    line-height: 12pt;
+    width: calc(100% - 10px); 
+    box-sizing: border-box;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    height: auto;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.a {
+    text-decoration: none;
+}
+
+.spacing {
+    display: flex;
+    justify-content: space-between;
+}
+
+#title {
+    z-index: 10; /* Mantieni il valore originale */
+}
+
+.spacing-prj {
+    display: flex;
+    justify-content: space-between; 
+    position: relative;
+    z-index: 1; /* Z-index inferiore rispetto alle immagini */
+}
+
+.spacer {
+    padding-bottom: 11pt;
+}
+
+.paring {
+    display: flex;
+    pointer-events: all;
+}
+
+.offset {
+    width: 150px;
+}
+
+.hidden-button {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.spacing:hover .hidden-button {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.prj-button {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1; /* Pulsanti sotto le immagini */
+    position: relative;
+}
+
+.spacing-prj:hover .prj-button {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.prj-button.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.clickit {
+    cursor: pointer; 
+}
+
+#toggle-button {
+    cursor: pointer;
+}
+
+.media-container {
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    z-index: 3; /* Le immagini sono sopra i pulsanti */
+}
+
+.images {
+    height: 350px;
+    width: auto;
+    cursor: nesw-resize; 
+    display: block;
+    margin: 0 auto;
+    z-index: 3; /* Le immagini sono sopra i pulsanti */
+    position: relative;
+}
+
+.images-about {
+    height: 25vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 3; /* Le immagini sono sopra i pulsanti */
+    position: fixed; /* Fissa l'immagine rispetto alla finestra del browser */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centro l'immagine in entrambe le direzioni */
+}
+
+.images.enlarged {
+    height: auto;
+    width: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    cursor: sw-resize;
+    z-index: 3;
+}
+
+.type {
+    display: none; 
+    width: 100%;
+    height: auto; 
+    box-sizing: border-box;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.lettering {
+    margin: 0px;
+    width: calc(100% - 10px);
+    height: auto; 
+    box-sizing: border-box;
+
+}
+
+.about{
+
+    width: calc(100% - 310px); 
+    margin-left: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    box-sizing: border-box; 
+    z-index: 4;
+}
+
+.random-box {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Mantiene l’immagine centrata */
+    align-items: center;
+    position: relative; /* Necessario per la posizione assoluta dei <p> */
+    box-sizing: border-box;
+    z-index: 4;
+}
+
+.random-field {
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 3; /* Le immagini sono sopra i pulsanti */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Allinea il contenuto al fondo */
+    margin-bottom: 5px; /* Elimina margini se necessario */
+    box-sizing: border-box;
+}
+
+.random-box p {
+    position: absolute;
+    bottom: 0; /* Mantiene i paragrafi nella parte bassa del div */
+    margin: 0;
+    z-index: 5;
+}
+
+.random-box p:first-child {
+    left: 0;
+}
+
+.random-box p:last-child {
+    right: 0;
+}
+
+.random-images {
+    height: 25.01vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 3; /* Le immagini sono sopra i pulsanti */
+    position: relative;
+}
+
+@media (max-width: 768px) {
+
+    #toggle-button {
+        display: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        margin: 0px;
+        width: 100%; 
+        z-index: 4;
+    }
+
+    .info {
+        position: fixed;
+        width: calc(100% - 10px);
+        bottom: 0;
+        margin-bottom: 5px;
+    }
+
+    .info-about {
+        width: 100%;
+    }
+
+    .top {
+        position: fixed;
+        width: calc(100% - 10px); 
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box; 
+        z-index: 4; 
+    }
+
+    .images {
+        height: 150px;
+        width: auto;
+        cursor: nesw-resize; 
+        display: block;
+        margin: 0 auto;
+        z-index: 3; /* Le immagini sono sopra i pulsanti */
+        position: relative;
+    }
+
+    #description {
+        background-color: #000000;
+    }
+
+}
