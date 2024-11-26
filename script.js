@@ -208,3 +208,24 @@ loadLozad(() => {
     });
     observer.observe();
 });
+
+
+
+
+
+const video = document.getElementById("myVideo");
+
+        // Disabilita autoplay su dispositivi con larghezza ≤ 768px
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            video.removeAttribute("autoplay");
+            video.pause(); // Assicura che il video non parta
+        }
+
+        // Aggiungi l'interazione: clic per play/pausa
+        video.addEventListener("click", () => {
+            if (video.paused) {
+                video.play(); // Avvia il video se è in pausa
+            } else {
+                video.pause(); // Metti in pausa il video se è in riproduzione
+            }
+        });
