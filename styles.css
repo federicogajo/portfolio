@@ -7,13 +7,13 @@
     font-weight: 600;
     font-size: 10pt;
     line-height: 11pt;
-    color: #000000;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
 body {
     display: flex;
-    background-color: #ffffff;
+    background-color: #000000;
     position: relative;
     z-index: 0;
 }
