@@ -148,7 +148,7 @@ body {
 .images {
     height: 350px;
     width: auto;
-    cursor: nesw-resize; 
+    cursor: zoom-in; 
     display: block;
     margin: 0 auto;
     z-index: 3; /* Le immagini sono sopra i pulsanti */
@@ -172,7 +172,7 @@ body {
     width: auto;
     max-width: 100vw;
     max-height: 100vh;
-    cursor: sw-resize;
+    cursor: zoom-out;
     z-index: 3;
 }
 
@@ -295,7 +295,7 @@ body {
     .images {
         height: 150px;
         width: auto;
-        cursor: nesw-resize; 
+        cursor: zoom-in; 
         display: block;
         margin: 0 auto;
         z-index: 3; /* Le immagini sono sopra i pulsanti */
