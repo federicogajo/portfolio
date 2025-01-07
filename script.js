@@ -83,7 +83,7 @@ toggleButtons.forEach((toggleButton, index) => {
     infoToggle.textContent = "-";
 
     toggleButton.addEventListener("click", function() {
-        if (description.style.display === "none") {
+        if (description.style.display === "block") {
             description.style.display = "block";
             infoToggle.textContent = "-";
         } else {
