@@ -69,29 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", updateVisibility);
 
     // Gestione dei pulsanti di toggle e delle descrizioni
-const toggleButtons = document.querySelectorAll("#toggle-button");
-const infoToggles = document.querySelectorAll("#info-toggle");
-const descriptions = document.querySelectorAll("#description");
-
-// Stato iniziale: descrizioni visibili
-toggleButtons.forEach((toggleButton, index) => {
-    const description = descriptions[index];
-    const infoToggle = infoToggles[index];
-
-    // Imposta lo stato iniziale aperto
-    description.style.display = "block";
-    infoToggle.textContent = "-";
-
-    toggleButton.addEventListener("click", function() {
-        if (description.style.display === "block") {
-            description.style.display = "block";
-            infoToggle.textContent = "-";
-        } else {
-            description.style.display = "none";
-            infoToggle.textContent = "+";
-        }
-    });
-});
+    const toggleButtons = document.querySelectorAll("#toggle-button");
+    const infoToggles = document.querySelectorAll("#info-toggle");
+    const descriptions = document.querySelectorAll("#description");
 
     toggleButtons.forEach((toggleButton, index) => {
         const description = descriptions[index];
